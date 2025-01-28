@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">This is just a paragraph</p>
+    <div id="fromj"></div>
+    <h2 id="math"></h2>
+    <script src=""></script>
+    
+    <script>
+        // text = document.getElementById("para").innerHTML
+        // console.log(text)
+
+        // document.getElementById("fromj").innerHTML = "This is from javascript"
+        // document.getElementById('math').innerHTML =  45 * 3
+
+        function person(){
+            document.write("name is Tade")
+        }
+        
+        function add(a, b){ //parameter: at the point of function declaration
+            let c = a + b
+            document.write(c)
+        }
+
+        add(2, 5) //argument: at the point of function call
+
+        function multiplicationTable(x){
+            for(i = 1; i<=12; i+=1){
+                console.log(x, 'x', i, '=', x * i)
+            }
+        }
+
+        multiplicationTable(4)
+
+        //write a function to take addition of all numbers from 1 to 10 using parameter and argument.
+
+        //put the bet guess game in a function using the amount and the guessed number as parameter.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>access</title>
+
+    <style>
+        #error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <input type="text" id="age" placeholder="enter your age">
+        <button onclick="submit()">Submit</button>
+
+        <h5 id="access">
+            wait to check for access
+        </h5>
+
+        <section>
+            <div>
+                <div>
+                    <input type="text" id="result">
+                </div>
+                <br>
+                <div>
+                    <input type="text" placeholder="enter a number" id="number1">
+                    <input type="text" placeholder="enter a number" id="number2">
+                </div>
+
+                <div class="numbers">
+                    <button onclick="multiply()">1</button>
+                    <button onclick="multiply()">2</button>
+                </div>
+                
+                <p id="error"></p>
+                <div class="buttons">
+                    <button onclick="multiply()">X</button>
+                    <button onclick="multiply()">+</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+          
+            function submit(){
+                let age = document.getElementById("age").value
+                console.log(age)
+
+                if (age == ""){
+                document.getElementById("access").innerHTML = "enter your age"
+                   document.getElementById("access").style.color="red"
+                }
+                else if(age > 20){
+                   document.getElementById("access").innerHTML = "access is denied"
+                   document.getElementById("access").style.color="red"
+                   document.getElementById("age").value = null;
+
+                }
+                else{
+                    document.getElementById("access").innerHTML = "access granted"
+                    document.getElementById("access").style.color="green"
+                    document.getElementById("age").value = null
+                }
+            }
+
+            function multiply(){
+                let number1 = document.getElementById("number1").value
+                let number2 = document.getElementById("number2").value
+
+                if(number1 == "" || number2 == ""){
+                   document.getElementById("error").innerHTML = "Can't leave fields empty"
+                }
+                else {
+                    let result = number1 * number2
+                    document.getElementById('result').value = result
+                }
+            }
+
+    </script>
+</body>
+</html>

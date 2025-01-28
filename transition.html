@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.trans {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+}
+
+.trans:hover {
+  width: 300px;
+  height: 300px;
+}
+
+.animate {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  animation-name: changecolor;
+  animation-duration: 4s;
+}
+
+@keyframes changecolor {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+</style>
+
+
+<body>
+    
+<!-- <div class="trans"></div> -->
+
+<div class="animate"></div>
+
+<p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+</body>
+</head>
+<body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript DOM</h1>
+    
+    <button id="myBtn">Date</button>
+    <p id="date"></p>
+
+    <input type="text" id="fname" onchange="upperCase()">
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color:#D94A38; width:120px; height:20px; padding:40px;">
+    Mouse Over Me</div>
+
+    <script>
+        //function to change text
+    function changeText(id) {
+      id.innerHTML = "Ooops!";
+    }
+
+    //function to display date after a click
+    document.getElementById("myBtn").onclick = displayDate;
+
+    function displayDate() {
+    document.getElementById("date").innerHTML = Date();
+    }
+
+    //change user entry to uppercase at point of entry
+    function upperCase() {
+    const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+    }
+
+    //mouse over
+    function mOver(obj) {
+        obj.innerHTML = "Thank You"
+    }
+    function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me"
+    }
+    </script>
+
+</body>
+</html>
